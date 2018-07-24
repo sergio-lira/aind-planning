@@ -245,8 +245,8 @@ class PlanningGraph:
                 continue
             
             goals_are_mutex = False
-            for goalA in layer:
-                for goalB in layer:
+            for goalA in self.goal:
+                for goalB in self.goal:
                     if layer.is_mutex(goalA, goalB):
                         goals_are_mutex = True            
             if not goals_are_mutex:
